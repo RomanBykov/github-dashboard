@@ -1,0 +1,10 @@
+.repositories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(250px, auto);
+  padding: 15px;
+
+  background-color: #35363A;
+  border-radius: 15px;
+}

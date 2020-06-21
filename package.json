@@ -1,0 +1,36 @@
+{
+  "name": "github-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "9.8.0",
+    "browser-sync": "2.26.7",
+    "gulp": "4.0.2",
+    "gulp-csso": "4.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "8.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "4.1.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-wait": "0.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "stylelint": "13.6.0",
+    "stylelint-config-htmlacademy": "0.1.4",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.11.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "testLaout": "npm run editorconfig && npm run stylelint",
+    "buildLaout": "gulp css",
+    "startLayout": "gulp start",
+    "eslint": "eslint src/**/*.js",
+    "test": "npm run eslint",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "Roman Bykov"
+}
