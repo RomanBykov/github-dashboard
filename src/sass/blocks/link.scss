@@ -1,0 +1,13 @@
+.link {
+  display: flex;
+
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+  word-break: break-all;
+
+  &:hover,
+  &:focus {
+    color: #ffe800;
+  }
+}

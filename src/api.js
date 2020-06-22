@@ -16,7 +16,7 @@ export default class API {
   }
 
   searchRepositories(queryString, page) {
-    return this._load({url: `search/repositories?q=${queryString}&sort=stars&order=desc&page=${page}&per_page=1`})
+    return this._load({url: `search/repositories?q=${queryString}&sort=stars&order=desc&page=${page}&per_page=10`})
       .then((response) => response.json());
   }
 

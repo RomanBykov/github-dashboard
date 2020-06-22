@@ -1,4 +1,4 @@
-.header {
+.page-header {
   margin: 0;
   margin-bottom: 20px;
   padding: 15px;
@@ -8,7 +8,7 @@
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-.header__title {
+.page-header__title {
   margin: 0;
   margin-bottom: 16px;
 
@@ -23,16 +23,16 @@
   cursor: default;
 }
 
-.header__form {
+.page-header__form {
   display: flex;
 }
 
-.header__search {
-  // width: 600px;
+.page-header__search {
+  width: 255px;
   margin-right: 12px;
 }
 
-.header__search-input {
+.page-header__search-input {
   box-sizing: border-box;
   width: 100%;
   padding: 10px 12px;
@@ -46,11 +46,11 @@
   outline: none;
 
   &:focus {
-    width: 300px;
+    width: 355px;
   }
 }
 
-.header__search-submit {
+.page-header__search-submit {
   -webkit-appearance: none;
   box-sizing: border-box;
   padding: 10px 12px;

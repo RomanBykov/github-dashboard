@@ -26,10 +26,10 @@ export const remove = (component) => {
 };
 
 export const append = (component) => {
-  const siteBody = document.querySelector(`body`);
+  const siteMain = document.querySelector(`main`);
   const newComponent = component.getElement();
 
-  siteBody.appendChild(newComponent);
+  siteMain.appendChild(newComponent);
 };
 
 export const replace = (newComponent, oldComponent) => {

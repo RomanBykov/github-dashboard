@@ -1,19 +1,45 @@
 .repository {
-  padding: 12px;
+  padding: 15px;
+  width: auto;
 
-  border: 1px solid #ffffff;
   border-radius: 15px;
+  background-color: #35363a;
+
+  p {
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+  }
 }
 
 .repository__title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  padding: 0;
 
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffe800;
+  }
 }
 
 .repository__link {
-  color: #687fad;
+  color: #ffffff;
   text-decoration: none;
+  transition: color 0.1s ease-in;
+  word-break: break-all;
+
+  &:hover,
+  &:focus {
+    color: #ffe800;
+  }
 }

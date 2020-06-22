@@ -1,4 +1,9 @@
+@import "blocks/link";
+@import "blocks/common";
 @import "blocks/page-body";
-@import "blocks/header";
+@import "blocks/page-header";
+@import "blocks/page-main";
 @import "blocks/repositories";
 @import "blocks/repository";
+@import "blocks/repository-details";
+@import "blocks/paginator";

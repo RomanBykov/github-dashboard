@@ -6,9 +6,9 @@ import {render, remove, RenderPosition} from "../utils/render";
 import RepositoryModel from "../models/repository";
 
 
-const renderRepositories = (container, repositories, api) => {
+const renderRepositories = (container, repositories, onViewChange, api) => {
   return repositories.map((repository) => {
-    const repositoryController = new RepositoryController(container, api);
+    const repositoryController = new RepositoryController(container, onViewChange, api);
     repositoryController.render(repository);
 
     return repositoryController;
@@ -24,7 +24,10 @@ export default class Search {
     this._searchComponent = null;
     this._paginationComponent = null;
     this._repositories = [];
+    this._repositoriesControllers = [];
     this._repositoriesContainerComponent = new RepositoriesComponent();
+
+    this._onViewChange = this._onViewChange.bind(this);
   }
 
   render() {
@@ -48,9 +51,10 @@ export default class Search {
     .then(RepositoryModel.parseRepositories)
     .then((foundedRepositories) => {
       this._removeRepositories();
+      const repositoriesContainer = this._repositoriesContainerComponent.getElement();
 
       this._repositories = foundedRepositories;
-      renderRepositories(this._repositoriesContainerComponent.getElement(), this._repositories, this._api);
+      this._repositoriesControllers = renderRepositories(repositoriesContainer, this._repositories, this._onViewChange, this._api);
 
       this._searchComponent.disableForm(false);
     });
@@ -63,9 +67,10 @@ export default class Search {
   }
 
   _removeRepositories() {
-    if (this._repositories) {
+    if (this._repositoriesControllers) {
       this._repositoriesContainerComponent.getElement().innerHTML = ``;
       this._repositories = [];
+      this._repositoriesControllers = [];
     }
   }
 
@@ -76,5 +81,11 @@ export default class Search {
     });
 
     render(this._mainContainer, this._paginationComponent);
+  }
+
+  _onViewChange() {
+    this._repositoriesControllers.forEach((repository) => {
+      repository.setDefaultView();
+    });
   }
 }

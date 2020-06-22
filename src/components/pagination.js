@@ -4,7 +4,7 @@ const createPagesMarkup = (count) => {
   let pages = [];
 
   for (let pageCount = 1; pageCount <= count; pageCount++) {
-    pages.push(`<li><a href="#">${pageCount}</a></li>`);
+    pages.push(`<li class="paginator__item"><a class="paginator__link" href="#">${pageCount}</a></li>`);
   }
 
   return pages.join(`\n`);
@@ -20,7 +20,7 @@ const createPaginationTemplate = (count) => {
   const pagesMarkup = pagesCount ? createPagesMarkup(pagesCount) : ``;
 
   return (
-    `<ul>${pagesMarkup}</ul>`
+    `<ul class="paginator">${pagesMarkup}</ul>`
   );
 };
 
