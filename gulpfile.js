@@ -20,8 +20,8 @@ gulp.task('css', function () {
   ]))
   .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('src/css'))
-  .pipe(server.stream())
-  .pipe(gulp.dest('public/css'));
+  .pipe(gulp.dest('public/css'))
+  .pipe(server.stream());
 });
 
 gulp.task('server', function () {

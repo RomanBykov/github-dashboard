@@ -1,3 +1,12 @@
+.link {
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+  word-break: break-all; }
+  .link:hover, .link:focus {
+    color: #ffe800; }
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   z-index: -1;
@@ -192,6 +201,24 @@
   border-radius: 15px; }
 
 .repository-details__user-nickname {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.repository-details__user-link {
+  margin-bottom: 20px; }
+
+.repository-details__langs {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none; }
+
+.repository-details__contributors {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.repository-details__description {
   margin: 0;
   margin-bottom: 20px; }
 
