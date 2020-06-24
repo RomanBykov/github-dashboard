@@ -1,13 +1,21 @@
 # github-dashboard
 
-# Download repository:
+#### Download repository:
+```
 git clone https://github.com/RomanBykov/github-dashboard.git
+```
 
-# Go to the app:
+#### Go to the app:
+```
 cd github-dashboard
+```
 
-# Install dependencies:
+#### Install dependencies:
+```
 npm install
+```
 
-# Server with hot reload at http://localhost:3000/
+#### Server with hot reload at http://localhost:3000/
+```
 npm start
+```
