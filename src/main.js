@@ -1,7 +1,6 @@
 import API from "./api";
 import SearchController from "./controllers/search";
 
-
 const END_POINT = `https://api.github.com/`;
 
 const api = new API(END_POINT);

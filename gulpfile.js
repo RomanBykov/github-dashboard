@@ -6,8 +6,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
 const wait = require('gulp-wait');
-// const csso = require('gulp-csso');
-// const rename = require('gulp-rename');
+const csso = require('gulp-csso');
+const rename = require('gulp-rename');
 
 gulp.task('css', function () {
   return gulp.src('src/sass/style.scss')
@@ -19,6 +19,10 @@ gulp.task('css', function () {
     autoprefixer()
   ]))
   .pipe(sourcemap.write('.'))
+  .pipe(gulp.dest('src/css'))
+  .pipe(gulp.dest('public/css'))
+  .pipe(csso())
+  .pipe(rename('style.min.css'))
   .pipe(gulp.dest('src/css'))
   .pipe(gulp.dest('public/css'))
   .pipe(server.stream());
@@ -35,9 +39,3 @@ gulp.task('server', function () {
 });
 
 gulp.task('start', gulp.series('css', 'server'));
-
-
-  // .pipe(gulp.dest('markup/css'))
-  // .pipe(csso())
-  // .pipe(rename('style.min.css'))
-  // .pipe(gulp.dest('markup/css'))

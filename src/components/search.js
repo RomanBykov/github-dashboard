@@ -1,4 +1,5 @@
 import AbstractComponent from "./abstract-component";
+import {encode} from "he";
 
 const createSearchTemplate = () => {
   return (
@@ -15,6 +16,16 @@ export default class Search extends AbstractComponent {
     return createSearchTemplate();
   }
 
+  hide() {
+    this.getElement().querySelector(`.page-header__search-input`)
+      .classList.add(`none`);
+  }
+
+  show() {
+    this.getElement().querySelector(`.page-header__search-input`)
+      .classList.remove(`none`);
+  }
+
   disableForm(isDisabled) {
     this.getElement().querySelector(`.page-header__search-input`)
       .disabled = isDisabled;
@@ -26,7 +37,7 @@ export default class Search extends AbstractComponent {
 
         if (evt.key === `Enter`) {
           evt.preventDefault();
-          const query = evt.target.value;
+          const query = encode(evt.target.value);
           this.disableForm(true);
 
           handler(query);

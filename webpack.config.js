@@ -1,4 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -13,17 +12,5 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     watchContentBase: true,
     port: 3000
-  },
-  plugins: [
-    // new HtmlWebpackPlugin({
-    //   title: 'Main',
-    //   template: './src/index.html',
-    //   filename: './public/index.html',
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'Details',
-    //   template: './src/details.html',
-    //   filename: './public/details.html',
-    // })
-  ]
+  }
 };

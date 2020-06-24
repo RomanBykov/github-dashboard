@@ -6,8 +6,9 @@
   "devDependencies": {
     "autoprefixer": "9.8.0",
     "browser-sync": "2.26.7",
+    "eslint": "7.3.1",
+    "eslint-config-htmlacademy": "0.5.2",
     "gulp": "4.0.2",
-    "gulp-copy": "^4.0.1",
     "gulp-csso": "4.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
@@ -16,6 +17,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-wait": "0.0.2",
     "html-webpack-plugin": "^4.3.0",
+    "moment-locales-webpack-plugin": "^1.2.0",
     "stylelint": "13.6.0",
     "stylelint-config-htmlacademy": "0.1.4",
     "webpack": "4.43.0",
@@ -33,5 +35,10 @@
     "build": "webpack",
     "start": "webpack-dev-server --open"
   },
-  "author": "Roman Bykov"
+  "author": "Roman Bykov",
+  "dependencies": {
+    "he": "1.2.0",
+    "js-cookie": "2.2.1",
+    "moment": "2.27.0"
+  }
 }
